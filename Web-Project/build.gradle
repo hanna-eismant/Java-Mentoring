@@ -1,0 +1,46 @@
+group 'org.webproject'
+version '0.1'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+ext {
+    // main libs
+    springVestion = '4.2.2.RELEASE'
+
+    // database libs
+    hsqldbVersion = '2.3.2'
+    springdataVersion = '1.9.2.RELEASE'
+    hibernateVersion = '5.1.0.Final'
+
+    // testing
+    junitVersion = '4.12'
+    assertjVersion = '3.3.0'
+    mockitoVersion = '1.10.19'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // spring core
+    compile("org.springframework:spring-context:$springVestion")
+    compile("org.springframework:spring-context-support:$springVestion")
+    compile("org.springframework:spring-tx:$springVestion")
+
+    // database
+    compile("org.hsqldb:hsqldb:$hsqldbVersion")
+    compile("org.springframework:spring-jdbc:$springVestion")
+    compile("org.springframework.data:spring-data-jpa:$springdataVersion")
+    compile("org.hibernate:hibernate-entitymanager:$hibernateVersion")
+
+    // testing
+    testCompile("junit:junit:$junitVersion")
+    testCompile("org.springframework:spring-test:$springVestion")
+    testCompile("org.mockito:mockito-all:$mockitoVersion")
+    testCompile("org.assertj:assertj-core:$assertjVersion")
+}
