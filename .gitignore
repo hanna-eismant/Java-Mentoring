@@ -1,3 +1,10 @@
 .idea/
-*.iml
+Java-Mentoring.iml
+
 out/
+
+/Web-Project/.gradle/
+/Web-Project/gradle/
+/Web-Project/build/
+
+/apache-tomcat-8.0.32/
