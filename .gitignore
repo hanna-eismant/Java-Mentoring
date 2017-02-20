@@ -1,5 +1,5 @@
 .idea/
-Java-Mentoring.iml
+**/*.iml
 
 out/
 
@@ -8,3 +8,4 @@ out/
 /Web-Project/build/
 
 /apache-tomcat-8.0.32/
+/hybris/

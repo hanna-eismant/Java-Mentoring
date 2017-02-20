@@ -1,0 +1,36 @@
+"Thread-1@454" prio=5 tid=0xe nid=NA waiting for monitor entry
+  java.lang.Thread.State: BLOCKED
+	 blocks Thread-0@452
+	 waiting for Thread-0@452 to release lock on <0x1c8> (a java.lang.String)
+	  at com.epam.cdp.javats.deadlock.Runner$2.run(Runner.java:32)
+	  - locked <0x1c7> (a java.lang.String)
+
+"Thread-0@452" prio=5 tid=0xd nid=NA waiting for monitor entry
+  java.lang.Thread.State: BLOCKED
+	 blocks Thread-1@454
+	 waiting for Thread-1@454 to release lock on <0x1c7> (a java.lang.String)
+	  at com.epam.cdp.javats.deadlock.Runner$1.run(Runner.java:19)
+	  - locked <0x1c8> (a java.lang.String)
+
+"Finalizer@340" daemon prio=8 tid=0x3 nid=NA waiting
+  java.lang.Thread.State: WAITING
+	  at java.lang.Object.wait(Object.java:-1)
+	  at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	  at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	  at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+"Reference Handler@341" daemon prio=10 tid=0x2 nid=NA waiting
+  java.lang.Thread.State: WAITING
+	  at java.lang.Object.wait(Object.java:-1)
+	  at java.lang.Object.wait(Object.java:502)
+	  at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:157)
+
+"DestroyJavaVM@453" prio=5 tid=0xf nid=NA runnable
+  java.lang.Thread.State: RUNNABLE
+
+"Attach Listener@338" daemon prio=5 tid=0x5 nid=NA runnable
+  java.lang.Thread.State: RUNNABLE
+
+"Signal Dispatcher@339" daemon prio=9 tid=0x4 nid=NA runnable
+  java.lang.Thread.State: RUNNABLE
+
