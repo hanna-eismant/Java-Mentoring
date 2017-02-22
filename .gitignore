@@ -8,4 +8,6 @@ out/
 /Web-Project/build/
 
 /apache-tomcat-8.0.32/
-/hybris/
+
+/hybris/*
+!/hybris/thread dumps/

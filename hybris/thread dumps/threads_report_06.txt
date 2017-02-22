@@ -1,0 +1,290 @@
+"ajp-bio-8009-Acceptor-0@11675" daemon prio=5 tid=0x37 nid=NA runnable
+  java.lang.Thread.State: RUNNABLE
+	  at java.net.DualStackPlainSocketImpl.accept0(DualStackPlainSocketImpl.java:-1)
+	  at java.net.DualStackPlainSocketImpl.socketAccept(DualStackPlainSocketImpl.java:131)
+	  at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+	  at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:199)
+	  - locked <0x2d9e> (a java.net.SocksSocketImpl)
+	  at java.net.ServerSocket.implAccept(ServerSocket.java:545)
+	  at java.net.ServerSocket.accept(ServerSocket.java:513)
+	  at org.apache.tomcat.util.net.DefaultServerSocketFactory.acceptSocket(DefaultServerSocketFactory.java:60)
+	  at org.apache.tomcat.util.net.JIoEndpoint$Acceptor.run(JIoEndpoint.java:220)
+	  at java.lang.Thread.run(Thread.java:745)
+
+"Attach Listener@338" daemon prio=5 tid=0x5 nid=NA runnable
+  java.lang.Thread.State: RUNNABLE
+
+"DestroyJavaVM@1292" prio=5 tid=0x13 nid=NA runnable
+  java.lang.Thread.State: RUNNABLE
+
+"http-bio-9001-Acceptor-0@11665" daemon prio=5 tid=0x33 nid=NA runnable
+  java.lang.Thread.State: RUNNABLE
+	  at java.net.DualStackPlainSocketImpl.accept0(DualStackPlainSocketImpl.java:-1)
+	  at java.net.DualStackPlainSocketImpl.socketAccept(DualStackPlainSocketImpl.java:131)
+	  at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+	  at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:199)
+	  - locked <0x2da0> (a java.net.SocksSocketImpl)
+	  at java.net.ServerSocket.implAccept(ServerSocket.java:545)
+	  at java.net.ServerSocket.accept(ServerSocket.java:513)
+	  at org.apache.tomcat.util.net.DefaultServerSocketFactory.acceptSocket(DefaultServerSocketFactory.java:60)
+	  at org.apache.tomcat.util.net.JIoEndpoint$Acceptor.run(JIoEndpoint.java:220)
+	  at java.lang.Thread.run(Thread.java:745)
+
+"http-bio-9002-Acceptor-0@11672" daemon prio=5 tid=0x35 nid=NA runnable
+  java.lang.Thread.State: RUNNABLE
+	  at java.net.DualStackPlainSocketImpl.accept0(DualStackPlainSocketImpl.java:-1)
+	  at java.net.DualStackPlainSocketImpl.socketAccept(DualStackPlainSocketImpl.java:131)
+	  at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+	  at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:199)
+	  - locked <0x2d9f> (a java.net.SocksSocketImpl)
+	  at java.net.ServerSocket.implAccept(ServerSocket.java:545)
+	  at sun.security.ssl.SSLServerSocketImpl.accept(SSLServerSocketImpl.java:348)
+	  at org.apache.tomcat.util.net.jsse.JSSESocketFactory.acceptSocket(JSSESocketFactory.java:233)
+	  at org.apache.tomcat.util.net.JIoEndpoint$Acceptor.run(JIoEndpoint.java:220)
+	  at java.lang.Thread.run(Thread.java:745)
+
+"RMI TCP Accept-0@1059" daemon prio=5 tid=0xe nid=NA runnable
+  java.lang.Thread.State: RUNNABLE
+	  at java.net.DualStackPlainSocketImpl.accept0(DualStackPlainSocketImpl.java:-1)
+	  at java.net.DualStackPlainSocketImpl.socketAccept(DualStackPlainSocketImpl.java:131)
+	  at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+	  at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:199)
+	  - locked <0xf7d> (a java.net.SocksSocketImpl)
+	  at java.net.ServerSocket.implAccept(ServerSocket.java:545)
+	  at java.net.ServerSocket.accept(ServerSocket.java:513)
+	  at sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(LocalRMIServerSocketFactory.java:52)
+	  at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:400)
+	  at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:372)
+	  at java.lang.Thread.run(Thread.java:745)
+
+"RMI TCP Accept-9003@2289" daemon prio=5 tid=0x16 nid=NA runnable
+  java.lang.Thread.State: RUNNABLE
+	  at java.net.DualStackPlainSocketImpl.accept0(DualStackPlainSocketImpl.java:-1)
+	  at java.net.DualStackPlainSocketImpl.socketAccept(DualStackPlainSocketImpl.java:131)
+	  at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+	  at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:199)
+	  - locked <0xf8c> (a java.net.SocksSocketImpl)
+	  at java.net.ServerSocket.implAccept(ServerSocket.java:545)
+	  at java.net.ServerSocket.accept(ServerSocket.java:513)
+	  at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:400)
+	  at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:372)
+	  at java.lang.Thread.run(Thread.java:745)
+
+"RMI TCP Accept-9004@2287" daemon prio=5 tid=0x17 nid=NA runnable
+  java.lang.Thread.State: RUNNABLE
+	  at java.net.DualStackPlainSocketImpl.accept0(DualStackPlainSocketImpl.java:-1)
+	  at java.net.DualStackPlainSocketImpl.socketAccept(DualStackPlainSocketImpl.java:131)
+	  at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:409)
+	  at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:199)
+	  - locked <0xf8b> (a java.net.SocksSocketImpl)
+	  at java.net.ServerSocket.implAccept(ServerSocket.java:545)
+	  at java.net.ServerSocket.accept(ServerSocket.java:513)
+	  at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:400)
+	  at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:372)
+	  at java.lang.Thread.run(Thread.java:745)
+
+"Signal Dispatcher@339" daemon prio=9 tid=0x4 nid=NA runnable
+  java.lang.Thread.State: RUNNABLE
+
+"Wrapper-Connection@1276" daemon prio=10 tid=0x12 nid=NA runnable
+  java.lang.Thread.State: RUNNABLE
+	  at java.net.SocketInputStream.socketRead0(SocketInputStream.java:-1)
+	  at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	  at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	  at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	  at java.net.SocketInputStream.read(SocketInputStream.java:223)
+	  at java.io.DataInputStream.readByte(DataInputStream.java:265)
+	  at org.tanukisoftware.wrapper.WrapperManager.handleBackend(WrapperManager.java:5505)
+	  at org.tanukisoftware.wrapper.WrapperManager.run(WrapperManager.java:5889)
+	  at java.lang.Thread.run(Thread.java:745)
+
+"AfterSaveEventPublisher-junit@11370" daemon prio=5 tid=0x31 nid=NA sleeping
+  java.lang.Thread.State: TIMED_WAITING
+	  at java.lang.Thread.sleep(Thread.java:-1)
+	  at de.hybris.platform.tx.DefaultAfterSaveListenerRegistry$AfterSaveEventPublisherThread.run(DefaultAfterSaveListenerRegistry.java:286)
+
+"AfterSaveEventPublisher-master@7856" daemon prio=5 tid=0x2c nid=NA sleeping
+  java.lang.Thread.State: TIMED_WAITING
+	  at java.lang.Thread.sleep(Thread.java:-1)
+	  at de.hybris.platform.tx.DefaultAfterSaveListenerRegistry$AfterSaveEventPublisherThread.run(DefaultAfterSaveListenerRegistry.java:286)
+
+"ajp-bio-8009-AsyncTimeout@11676" daemon prio=5 tid=0x38 nid=NA sleeping
+  java.lang.Thread.State: TIMED_WAITING
+	  at java.lang.Thread.sleep(Thread.java:-1)
+	  at org.apache.tomcat.util.net.JIoEndpoint$AsyncTimeout.run(JIoEndpoint.java:152)
+	  at java.lang.Thread.run(Thread.java:745)
+
+"ContainerBackgroundProcessor[StandardEngine[Catalina]]@11657" daemon prio=5 tid=0x32 nid=NA sleeping
+  java.lang.Thread.State: TIMED_WAITING
+	  at java.lang.Thread.sleep(Thread.java:-1)
+	  at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1513)
+	  at java.lang.Thread.run(Thread.java:745)
+
+"http-bio-9001-AsyncTimeout@11667" daemon prio=5 tid=0x34 nid=NA sleeping
+  java.lang.Thread.State: TIMED_WAITING
+	  at java.lang.Thread.sleep(Thread.java:-1)
+	  at org.apache.tomcat.util.net.JIoEndpoint$AsyncTimeout.run(JIoEndpoint.java:152)
+	  at java.lang.Thread.run(Thread.java:745)
+
+"http-bio-9002-AsyncTimeout@11674" daemon prio=5 tid=0x36 nid=NA sleeping
+  java.lang.Thread.State: TIMED_WAITING
+	  at java.lang.Thread.sleep(Thread.java:-1)
+	  at org.apache.tomcat.util.net.JIoEndpoint$AsyncTimeout.run(JIoEndpoint.java:152)
+	  at java.lang.Thread.run(Thread.java:745)
+
+"Thread-8@8577" daemon prio=5 tid=0x2d nid=NA sleeping
+  java.lang.Thread.State: TIMED_WAITING
+	  at java.lang.Thread.sleep(Thread.java:-1)
+	  at de.hybris.platform.servicelayer.stats.DefaultStatisticsService$StatDaemonThread.run(DefaultStatisticsService.java:335)
+
+"Wrapper-Control-Event-Monitor@1264" daemon prio=5 tid=0x10 nid=NA sleeping
+  java.lang.Thread.State: TIMED_WAITING
+	  at java.lang.Thread.sleep(Thread.java:-1)
+	  at org.tanukisoftware.wrapper.WrapperManager$3.run(WrapperManager.java:1040)
+
+"WrapperSimpleAppMain@1298" prio=5 tid=0x15 nid=NA sleeping
+  java.lang.Thread.State: TIMED_WAITING
+	  at java.lang.Thread.sleep(Thread.java:-1)
+	  at org.apache.catalina.core.StandardServer.await(StandardServer.java:414)
+	  at org.apache.catalina.startup.Catalina.await(Catalina.java:777)
+	  at org.apache.catalina.startup.Catalina.start(Catalina.java:723)
+	  at sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-1)
+	  at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	  at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	  at java.lang.reflect.Method.invoke(Method.java:497)
+	  at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:321)
+	  at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:455)
+	  at sun.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-1)
+	  at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	  at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	  at java.lang.reflect.Method.invoke(Method.java:497)
+	  at org.tanukisoftware.wrapper.WrapperSimpleApp.run(WrapperSimpleApp.java:325)
+	  at java.lang.Thread.run(Thread.java:745)
+
+"__DEFAULT__@5677" daemon prio=5 tid=0x29 nid=NA waiting
+  java.lang.Thread.State: WAITING
+	  at java.lang.Object.wait(Object.java:-1)
+	  at java.lang.Object.wait(Object.java:502)
+	  at java.util.TimerThread.mainLoop(Timer.java:526)
+	  at java.util.TimerThread.run(Timer.java:505)
+
+"BatchSelfHealingItemsRunner@9362" daemon prio=5 tid=0x2f nid=NA waiting
+  java.lang.Thread.State: WAITING
+	  at java.lang.Object.wait(Object.java:-1)
+	  at de.hybris.platform.directpersistence.selfhealing.impl.DefaultSelfHealingService$BatchSelfHealingItemsScheduledRunnable.waitIfNecesary(DefaultSelfHealingService.java:351)
+	  at de.hybris.platform.directpersistence.selfhealing.impl.DefaultSelfHealingService$BatchSelfHealingItemsScheduledRunnable.run(DefaultSelfHealingService.java:339)
+	  at de.hybris.platform.util.threadpool.PoolableThread.run(PoolableThread.java:195)
+
+"Catalina-startStop-1@2371" daemon prio=5 tid=0x1e nid=NA waiting
+  java.lang.Thread.State: WAITING
+	  at sun.misc.Unsafe.park(Unsafe.java:-1)
+	  at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+	  at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+	  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1066)
+	  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+	  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	  at java.lang.Thread.run(Thread.java:745)
+
+"commons-pool-EvictionTimer@3725" daemon prio=5 tid=0x26 nid=NA waiting
+  java.lang.Thread.State: WAITING
+	  at java.lang.Object.wait(Object.java:-1)
+	  at java.util.TimerThread.mainLoop(Timer.java:552)
+	  at java.util.TimerThread.run(Timer.java:505)
+
+"Finalizer@340" daemon prio=8 tid=0x3 nid=NA waiting
+  java.lang.Thread.State: WAITING
+	  at java.lang.Object.wait(Object.java:-1)
+	  at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	  at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	  at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+"GC Daemon@2381" daemon prio=2 tid=0x19 nid=NA waiting
+  java.lang.Thread.State: WAITING
+	  at java.lang.Object.wait(Object.java:-1)
+	  at sun.misc.GC$Daemon.run(GC.java:117)
+
+"HSQLDB Timer @820b39a@3947" daemon prio=5 tid=0x27 nid=NA waiting
+  java.lang.Thread.State: WAITING
+	  at java.lang.Object.wait(Object.java:-1)
+	  at org.hsqldb.lib.HsqlTimer$TaskQueue.park(Unknown Source:-1)
+	  at org.hsqldb.lib.HsqlTimer.nextTask(Unknown Source:-1)
+	  at org.hsqldb.lib.HsqlTimer$TaskRunner.run(Unknown Source:-1)
+	  at java.lang.Thread.run(Thread.java:745)
+
+"localhost-startStop-1@2373" daemon prio=5 tid=0x1f nid=NA waiting
+  java.lang.Thread.State: WAITING
+	  at sun.misc.Unsafe.park(Unsafe.java:-1)
+	  at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+	  at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+	  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1066)
+	  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+	  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	  at java.lang.Thread.run(Thread.java:745)
+
+"Ping Timer@9348" daemon prio=5 tid=0x2e nid=NA waiting
+  java.lang.Thread.State: WAITING
+	  at java.lang.Object.wait(Object.java:-1)
+	  at java.util.TimerThread.mainLoop(Timer.java:552)
+	  at java.util.TimerThread.run(Timer.java:505)
+
+"Reference Handler@341" daemon prio=10 tid=0x2 nid=NA waiting
+  java.lang.Thread.State: WAITING
+	  at java.lang.Object.wait(Object.java:-1)
+	  at java.lang.Object.wait(Object.java:502)
+	  at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:157)
+
+"RMI Reaper@2288" prio=5 tid=0x18 nid=NA waiting
+  java.lang.Thread.State: WAITING
+	  at java.lang.Object.wait(Object.java:-1)
+	  at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	  at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	  at sun.rmi.transport.ObjectTable$Reaper.run(ObjectTable.java:351)
+	  at java.lang.Thread.run(Thread.java:745)
+
+"RMI RenewClean-[192.168.100.2:9004]@2340" daemon prio=5 tid=0x1c nid=NA waiting
+  java.lang.Thread.State: WAITING
+	  at java.lang.Object.wait(Object.java:-1)
+	  at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	  at sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run(DGCClient.java:536)
+	  at java.lang.Thread.run(Thread.java:745)
+
+"RMI Scheduler(0)@2324" daemon prio=5 tid=0x1b nid=NA waiting
+  java.lang.Thread.State: WAITING
+	  at sun.misc.Unsafe.park(Unsafe.java:-1)
+	  at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+	  at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+	  at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+	  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+	  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+	  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	  at java.lang.Thread.run(Thread.java:745)
+
+"Statistics Thread-__DEFAULT__-1@5738" daemon prio=5 tid=0x2b nid=NA waiting
+  java.lang.Thread.State: WAITING
+	  at sun.misc.Unsafe.park(Unsafe.java:-1)
+	  at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	  at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+	  at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+	  at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+	  at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+	  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+	  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	  at java.lang.Thread.run(Thread.java:745)
+
+"Task-master-poll@9554" daemon prio=5 tid=0x30 nid=NA waiting
+  java.lang.Thread.State: WAITING
+	  at java.lang.Object.wait(Object.java:-1)
+	  at de.hybris.platform.task.impl.DefaultTaskService$Poll.waitForNextTurn(DefaultTaskService.java:935)
+	  at de.hybris.platform.task.impl.DefaultTaskService$Poll.run(DefaultTaskService.java:857)
+	  at de.hybris.platform.core.AbstractTenant$5.run(AbstractTenant.java:2521)
+	  at java.lang.Thread.run(Thread.java:745)
+
+"Timer-0@4264" daemon prio=5 tid=0x28 nid=NA waiting
+  java.lang.Thread.State: WAITING
+	  at java.lang.Object.wait(Object.java:-1)
+	  at java.util.TimerThread.mainLoop(Timer.java:552)
+	  at java.util.TimerThread.run(Timer.java:505)
+
