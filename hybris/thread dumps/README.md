@@ -24,7 +24,10 @@ hybris 6 with follow extensions:
 - yempty
 - yhacext
 
-Server startup took about  79825 ms (1.3 min)
+Server startup took about  79825 ms (1.3 min). During startup I generated 6 thread dumps and create diagram based on it.
+
+From my point of view, startup takes so much time because there are lot of threads in hybris, despite the list of enabled extensions.
+Moreover, count of runnable threads is less than others at same time. I guess that it depends on thread pool configuration. 
 
 
-![Threads Diagram](threads_diagram.png?raw=true)
+![Threads Diagram](https://github.com/hanna-eismant/Java-Mentoring/blob/JaMP/2017w/hybris/thread%20dumps/threads%20diagram.png?raw=true)
