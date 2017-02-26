@@ -1,5 +1,6 @@
 .idea/
 **/*.iml
+**/*.log
 
 out/
 
@@ -11,3 +12,8 @@ out/
 
 /hybris/*
 !/hybris/thread dumps/
+
+/Classloading/.gradle/
+/Classloading/gradle/
+/Classloading/build/*
+!/Classloading/build/libs

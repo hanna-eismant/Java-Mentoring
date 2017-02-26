@@ -1,0 +1,36 @@
+group 'com.epam.cdp.javats'
+version '0.1'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+ext {
+    loggerVersion = '1.7.16'
+    guavaVersion = '19.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile("org.slf4j:slf4j-simple:$loggerVersion")
+    compile("org.slf4j:slf4j-api:$loggerVersion")
+    compile("org.slf4j:slf4j-log4j12:$loggerVersion")
+
+    compile("com.google.guava:guava:$guavaVersion")
+}
+
+//create a single Jar with all dependencies
+jar {
+    manifest {
+        attributes(
+                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+                'Main-Class': 'com.epam.cdp.javats.classloading.Runner'
+        )
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
