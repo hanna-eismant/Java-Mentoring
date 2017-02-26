@@ -8,8 +8,6 @@ import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 import org.apache.log4j.Logger;
 
@@ -24,21 +22,11 @@ public class Runner {
     private static final String MENU_SET_NAME = "name";
     private static final String MENU_LOAD_CLASS = "load";
 
+    private static final String PATH_TO_JAR = "d:/greeting.jar";
+
     private static String name = "Jon Doe";
 
-    private static String pathToJar;
-    private static URLClassLoader classLoader;
-
     public static void main(String[] args) {
-
-        try {
-            prepareClassLoader();
-        } catch (MalformedURLException e) {
-            LOGGER.error(e);
-            final String message = String.format("Class Loader can't load jar: '%s'. Terminate program.", pathToJar);
-            LOGGER.error(message);
-            System.exit(-1);
-        }
 
         LOGGER.info("Enter h for help or q for exit");
 
@@ -54,7 +42,7 @@ public class Runner {
                 } else if (!Strings.isNullOrEmpty(input) && input.startsWith(MENU_SET_NAME)) {
                     saveName(input);
                 } else if (!Strings.isNullOrEmpty(input) && input.startsWith(MENU_LOAD_CLASS)) {
-                    loadClass(input);
+                    loadClass();
                 } else {
                     LOGGER.warn("Unknown command");
                     showHelp();
@@ -66,17 +54,9 @@ public class Runner {
         }
     }
 
-    private static void prepareClassLoader() throws MalformedURLException {
-        Path currentRelativePath = Paths.get("");
-        String currentAbsolutePath = currentRelativePath.toAbsolutePath().toString();
-        pathToJar = currentAbsolutePath + "/build/libs/Classloading-0.1.jar";
-
-        classLoader = URLClassLoader.newInstance(new URL[]{new URL("file:/" + pathToJar)});
-    }
-
-    private static void loadClass(final String input) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        LOGGER.info("Trying load class from jar: " + pathToJar);
-
+    private static void loadClass() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, MalformedURLException {
+        LOGGER.info("Trying load class from jar: " + PATH_TO_JAR);
+        URLClassLoader classLoader = new URLClassLoader(new URL[]{new URL("file:/" + PATH_TO_JAR)});
         Class cls = classLoader.loadClass("com.epam.cdp.javats.classloading.SomeImplementation");
         Method method = cls.getMethod("greeting", String.class);
         method.invoke(null, (Object) name);
