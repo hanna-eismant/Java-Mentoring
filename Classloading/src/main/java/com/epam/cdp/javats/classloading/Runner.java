@@ -30,13 +30,17 @@ public class Runner {
     private static URLClassLoader classLoader;
 
     public static void main(String[] args) {
-        LOGGER.info("Enter h for help or q for exit");
 
         try {
             prepareClassLoader();
         } catch (MalformedURLException e) {
             LOGGER.error(e);
+            final String message = String.format("Class Loader can't load jar: '%s'. Terminate program.", pathToJar);
+            LOGGER.error(message);
+            System.exit(-1);
         }
+
+        LOGGER.info("Enter h for help or q for exit");
 
         try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
             while (true) {
