@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://epam.com/cdp/ws/api/soap"
+           targetNamespace="http://epam.com/cdp/ws/api/soap">
+
+    <!-- book ticket -->
+    <xs:element name="bookTicketRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="departureCity" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="arrivalCity" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="departureDate" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="arrivalDate" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="passenger" type="tns:soapPerson" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="bookTicketResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ticketNumber" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <!-- get ticket by number -->
+    <xs:element name="getTicketRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ticketNumber" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getTicketResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ticket" type="tns:soapTicket" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- pay ticket -->
+    <xs:element name="payTicketRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ticketNumber" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="payTicketResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="success" type="xs:boolean" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- return ticket -->
+    <xs:element name="returnTicketRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ticketNumber" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="returnTicketResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="success" type="xs:boolean" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- soap types -->
+
+    <xs:complexType name="soapPerson">
+        <xs:sequence>
+            <xs:element name="firstName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="secondName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="birthday" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="soapTicket">
+        <xs:sequence>
+            <xs:element name="number" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="departureCity" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="arrivalCity" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="departureDate" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="arrivalDate" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="price" type="xs:double" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="state" type="tns:ticketState" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="passenger" type="tns:soapPerson" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="ticketState" final="restriction" >
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="BOOKED" />
+            <xs:enumeration value="PAID" />
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
