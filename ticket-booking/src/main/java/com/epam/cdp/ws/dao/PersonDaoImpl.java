@@ -16,11 +16,8 @@ public class PersonDaoImpl implements PersonDao {
 
     @Override
     public Person find(final String firstName, final String secondName, final LocalDate birthday) {
-        return storage.stream().filter(person ->
-                Objects.equals(person.getFirstName(), firstName)
-                        && Objects.equals(person.getSecondName(), secondName)
-                        && Objects.equals(person.getBirthday(), birthday
-                )).findFirst().orElse(null);
+        Person pattern = new Person(firstName, secondName, birthday);
+        return storage.stream().filter(person -> Objects.equals(person, pattern)).findFirst().orElse(null);
     }
 
     @Override
