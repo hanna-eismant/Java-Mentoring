@@ -17,3 +17,11 @@ out/
 /Classloading/gradle/
 /Classloading/build/*
 !/Classloading/build/libs
+
+/Jenkins/
+/Sonar/
+jenkins-2.46.1.zip
+jenkins.war
+
+ticket-booking-client/target/
+ticket-booking/target/
