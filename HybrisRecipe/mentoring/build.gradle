@@ -1,5 +1,3 @@
-apply plugin: 'installer-platform-plugin'
-
 buildscript {
     repositories {
         mavenLocal()
