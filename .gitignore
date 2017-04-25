@@ -25,3 +25,5 @@ jenkins.war
 
 ticket-booking-client/target/
 ticket-booking/target/
+
+SimpleWebApp/target/
