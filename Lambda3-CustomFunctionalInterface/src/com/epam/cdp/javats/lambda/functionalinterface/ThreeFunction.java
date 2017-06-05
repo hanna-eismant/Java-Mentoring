@@ -1,7 +1,7 @@
 package com.epam.cdp.javats.lambda.functionalinterface;
 
 @FunctionalInterface
-public interface ThreeFunction {
+public interface ThreeFunction<A, B, C, R> {
 
-    long calculate(int a, int b, int c);
+    R calculate(A a, B b, C c);
 }
