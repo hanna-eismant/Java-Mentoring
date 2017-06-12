@@ -5,22 +5,23 @@ import java.util.concurrent.CyclicBarrier;
 
 public class Car implements Runnable {
 
-    public static final CyclicBarrier GATE = new CyclicBarrier(4);
     private static final long MAX_DISTANCE = 10000;
     private long friction;
     private long distance;
     private String name;
+    private CyclicBarrier gate;
 
-    public Car(String name, long friction) {
+    public Car(String name, long friction, CyclicBarrier gate) {
         this.name = name;
         this.friction = friction;
+        this.gate = gate;
     }
 
     @Override
     public void run() {
 
         try {
-            GATE.await();
+            gate.await();
         } catch (InterruptedException | BrokenBarrierException e) {
             e.printStackTrace();
         }
