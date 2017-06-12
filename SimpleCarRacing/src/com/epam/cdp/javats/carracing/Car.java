@@ -1,6 +1,11 @@
 package com.epam.cdp.javats.carracing;
 
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
+
 public class Car implements Runnable {
+
+    public static final CyclicBarrier GATE = new CyclicBarrier(4);
     private static final long MAX_DISTANCE = 10000;
     private long friction;
     private long distance;
@@ -13,6 +18,13 @@ public class Car implements Runnable {
 
     @Override
     public void run() {
+
+        try {
+            GATE.await();
+        } catch (InterruptedException | BrokenBarrierException e) {
+            e.printStackTrace();
+        }
+        
         try {
             while (distance < MAX_DISTANCE) {
                 Thread.sleep(friction);
