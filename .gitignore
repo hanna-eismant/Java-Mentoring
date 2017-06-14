@@ -2,6 +2,8 @@
 **/*.iml
 **/*.log
 
+**/*.class
+
 out/
 
 /Web-Project/.gradle/
@@ -27,3 +29,5 @@ ticket-booking-client/target/
 ticket-booking/target/
 
 SimpleWebApp/target/
+
+/MemoryManagement/test.txt
