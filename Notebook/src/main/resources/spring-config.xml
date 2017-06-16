@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+
+    <bean id="configurationProperties"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:database.properties</value>
+            </list>
+        </property>
+        <property name="ignoreResourceNotFound" value="true"/>
+        <property name="systemPropertiesMode">
+            <util:constant
+                    static-field="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.SYSTEM_PROPERTIES_MODE_OVERRIDE"/>
+        </property>
+    </bean>
+
+    <bean class="com.epam.cdp.javats.notebook.MongoConfiguration"
+          id="mongoConfiguration"
+          init-method="init"
+          destroy-method="destroy">
+        <constructor-arg value="${database.name}"/>
+    </bean>
+
+    <bean class="com.epam.cdp.javats.notebook.note.NoteDaoImpl"
+          id="noteDao"
+          init-method="init">
+        <constructor-arg ref="mongoConfiguration"/>
+    </bean>
+
+    <bean class="com.epam.cdp.javats.notebook.note.NoteServiceImpl"
+          id="noteService">
+        <constructor-arg ref="noteDao"/>
+    </bean>
+
+</beans>
