@@ -1,8 +1,8 @@
 ## Configure Mongo DB
 1. Download and install MongoDB server: https://www.mongodb.com/download-center#community
 1. Change path to necessary in `mongod.cfg`. Pay attention, that these catalogs should be created manually before start mongo server.
-1. Change path to mongo server executable in start_mongo.bat
-1. Start mongo server via start_mongo.bat
+1. Change path to mongo server executable in `start_mongo.bat`
+1. Start mongo server via `start_mongo.bat`
 
 ## Use options in program
 ```
